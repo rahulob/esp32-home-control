@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  row-gap: 2rem;
+  place-content: center;
+  height: 100vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .title {
+    text-align: center;
+    margin: 0;
+  }
+
+  .btn {
+    margin: auto;
+    background-color: white;
+    border: 1px solid #80808095;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+    width: 80vw;
+    padding: 0 3rem 0 2rem;
+
+    @media (min-width: 398px) {
+      width: max-content;
+      padding-inline-start: 5rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .btn_last {
+    padding: 1rem;
+    width: inherit;
+  }
+}
