@@ -1,8 +1,9 @@
+# Description
 This is a  project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 - [Next.js](https://nextjs.org/) for the front-end of this app 
 - [Firebase](https://www.firebase.com) for storing and updating real time data.
-# Description
+
 This project is basically a small automation project which is used to control the ESP32 microcontroller which in turn will control the Relay modules connected to it.
 
 For this project we only used 4 relay module.
@@ -22,6 +23,9 @@ After the second command your development server would be up and running on [loc
 ## Setup Firebase
 First create a project on firebase. 
 After that create realtime database, add variables to the real time database. For example, my database looks like this
+
+![Firebase database screenshot](https://user-images.githubusercontent.com/61629739/178055789-e18230a2-79f7-4077-8c9d-ec3e806cc18e.png)
+
 
 Create a web app inside that project. Firbase config values are shown in the firebase console after creating the web app. Paste them inside the `./lib/firebase.ts` file.
 
