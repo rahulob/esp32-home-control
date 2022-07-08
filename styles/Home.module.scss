@@ -2,10 +2,6 @@
   display: grid;
   row-gap: 2rem;
   place-content: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 
   .title {
     text-align: center;
@@ -33,13 +29,6 @@
     padding: 1rem;
   }
 
-  .textField {
-    width: 80vw;
-
-    @media (min-width: 398px) {
-      width: 35ch;
-    }
-  }
 }
 
 .navbar {
@@ -47,4 +36,28 @@
   display: flex;
   justify-content: flex-end;
   border-bottom: 1px solid #80808095;
+}
+
+.form {
+  width: fit-content;
+  margin: auto;
+  padding: 4rem;
+  display: grid;
+  row-gap: 2rem;
+  border: 1px solid black;
+  border-radius: 0.35rem;
+  margin-block: 5rem;
+
+  .title {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .textField {
+    width: 80vw;
+
+    @media (min-width: 398px) {
+      width: 35ch;
+    }
+  }
 }
