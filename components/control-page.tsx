@@ -32,9 +32,9 @@ export default function ControlPage() {
   }, [value1, value2, value3, value4])
 
 
-  const toggleRelay = (variable: string) => {
+  const toggleRelay = (variable: string, value: boolean) => {
     const updates: { [key: string]: boolean } = {}
-    updates[`/Data/Relay${variable}`] = true
+    updates[`/Data/Relay${variable}`] = !value
     return update(refDb, updates)
   }
   const turnOffAll = () => {
@@ -59,10 +59,10 @@ export default function ControlPage() {
       </nav>
       <div className={styles.container}>
         <h1 className={styles.title}>Controllers</h1>
-        <ToggleSwitch className={styles.btn} label="Relay 1" value={value1} onChange={() => toggleRelay('1').then(() => setValue1(!value1))} />
-        <ToggleSwitch className={styles.btn} label="Relay 2" value={value2} onChange={() => toggleRelay('2').then(() => setValue2(!value2))} />
-        <ToggleSwitch className={styles.btn} label="Relay 3" value={value3} onChange={() => toggleRelay('3').then(() => setValue3(!value3))} />
-        <ToggleSwitch className={styles.btn} label="Relay 4" value={value4} onChange={() => toggleRelay('4').then(() => setValue4(!value4))} />
+        <ToggleSwitch className={styles.btn} label="Relay 1" value={value1} onChange={() => toggleRelay('1', value1).then(() => setValue1(!value1))} />
+        <ToggleSwitch className={styles.btn} label="Relay 2" value={value2} onChange={() => toggleRelay('2', value2).then(() => setValue2(!value2))} />
+        <ToggleSwitch className={styles.btn} label="Relay 3" value={value3} onChange={() => toggleRelay('3', value3).then(() => setValue3(!value3))} />
+        <ToggleSwitch className={styles.btn} label="Relay 4" value={value4} onChange={() => toggleRelay('4', value4).then(() => setValue4(!value4))} />
         <Button variant='contained' className={styles.btn_last} onClick={turnOffAll} disabled={turnOff}>Turn off all appliances</Button>
       </div>
     </>
