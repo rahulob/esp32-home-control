@@ -39,24 +39,24 @@
 }
 
 .form {
-  width: fit-content;
-  margin: auto;
-  padding: 4rem;
   display: grid;
-  row-gap: 2rem;
-  border: 1px solid black;
-  border-radius: 0.35rem;
-  margin-block: 5rem;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  gap: 2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 3rem 2rem;
 
   .title {
-    margin: 0;
-    font-weight: 400;
+    text-align: center;
   }
 
-  .textField {
-    width: 80vw;
+  @media (min-width:398px) {
+    width: max-content;
 
-    @media (min-width: 398px) {
+    .textField {
       width: 35ch;
     }
   }
